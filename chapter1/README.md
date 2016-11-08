@@ -22,3 +22,19 @@ X	LDAP
 X	SCRAM-SHA-1
 	LTPA
 X	Kerberos
+
+## Authentication Mechanisms
+Which of the following statements are true?
+Check all that apply:
+	Kerberos is an authentication and authorization protocol
+X	X.509 can be used to authentivcate members of a sharded cluster
+	SCRAM-SHA-1 is a certificate based authentication mechanism
+X	MONGODB-CR is deprecated as of MongoDB 3.0
+	A copy of a user's LDAP cerdentials are stored in MongoDB
+
+
+
+
+
+
+
