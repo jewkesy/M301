@@ -45,7 +45,7 @@ A copy of a user's LDAP credentials are stored in MongoDB.
 
 
 
-# The Localhost Exception
+## The Localhost Exception
 Which of the following statements are false concerning the localhost exception?
 Check all that apply:
 X	The localhost execption allows you to create one user per database
@@ -70,6 +70,47 @@ The localhost exception is not applicable to members in a sharded cluster.
 The true statement is:
 
 The localhost exception is only applicable when connected to MongoDB via the localhost network interface.
+
+
+## Authentication Methods
+Which of these authentication methods will fail if a server is started with the following options?
+`
+$ mongod --auth
+$ mongo
+use admin
+db.createUser({user: 'kirby', pwd: 'password', roles: ['root']})
+`
+Check all that apply:
+
+X	`$ mongo -u kirby -p password
+	`$ mongo admin -u kirby -p password
+X	`$ mongo 
+	db.auth('kirby', 'password')`
+	`$ mongo
+	use admin
+	db.auth('kirby', 'password')`
+
+
+Answer
+
+The authentication methods that will fail for the given server configuration are:
+`
+$ mongo -u kirby -p password
+`
+A user must authenticate to the database they were created on. This command will fail because kirby was created on the admin database, but mongo attempts to connect to the test database unless otherwise specified.
+`
+$ mongo
+db.auth('kirby', 'password')
+`
+You are allowed to connect to a server that has authorization enabled without authenticating first. The seccond command will fail however because you'll be connected to the test database and kirby was created on the admin database.
+
+The authentication methods that will succeed for the given server configuration are:
+`
+$ mongo admin -u kirby -p password
+$ mongo
+use admin
+db.auth('kirby', 'password')
+`
 
 
 
