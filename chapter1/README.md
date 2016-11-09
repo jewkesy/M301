@@ -241,6 +241,24 @@ Answer
 
 --clusterAuthMode x509 is passed to mongod to specify that X.509 certificates will be used for internal authentication.
 
+## Migrating MONGODB-CR to SCRAM-SHA-1
+Which of the following statements are true with respect to changing authentication mechanisms from MONGODB-CR to SCRAM-SHA-1?
+Check all that apply:
+X	Updating drivers might be required.
+X	MONGODB-CR will be disabled after the migration.
+X	SCRAM-SHA-1 is more secure that MONGODB-CR.
+X	On 3.0 before importing 2.6 user data new users are created with SCRAM-SHA-1.
+
+Answer
+
+All of the following statements are true with respect to changing authentication mechanisms from MONGODB-CR to SCRAM-SHA-1:
+
+Updating drivers might be required.
+MONGODB-CR will be disabled after the migration.
+SCRAM-SHA-1 is more secure that MONGODB-CR.
+On 3.0 before importing 2.6 user data new users are created with SCRAM-SHA-1.
+
+
 
 
 
