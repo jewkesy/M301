@@ -197,6 +197,39 @@ LDAP is more secure than Kerberos
 This is not true. LDAP was not designed for the purpose of external authentication. LDAP was designed to store user meta-data in a directory service. Kerberos was designed for the sole purpose of external authentication.
 
 
+## Enabling Kerberos
+Which of the following statements are true?
+Check all that apply:
+
+X	Kerberos and MongoDB have mutual trust through a shared key.
+X	Kerberos principals are case-sensitive.
+X	MongoDB uses the GSSAPI authentication mechanism for Kerberos authentication.
+X	LDAP Authentication support is a MongoDB Enterprise only feature.
+
+Answer
+
+All of the following statements are true:
+
+Kerberos and MongoDB have mutual trust through a shared key.
+Kerberos principals are case-sensitive.
+MongoDB uses the GSSAPI authentication mechanism for Kerberos authentication.
+LDAP Authentication support is a MongoDB Enterprise only feature.
+
+## Enabling Internal Authentication
+Which of the following security mechanisms are supported by internal authentication with MongoDB?
+Check all that apply:
+	MONGODB-CR
+X	X.509
+	LDAP
+	Kerberos
+X	Keyfile
+
+Answer
+
+The following security mechanisms are supported by internal authentication with MongoDB:
+
+X.509
+Keyfile
 
 
 
