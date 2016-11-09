@@ -175,5 +175,29 @@ The certificate must be signed by the certificate authority file passed to the m
 The subject of the certificate must match the name of the user in the $external database.
 
 
+## Enabling LDAP
+Which of the following are true regarding LDAP authentication?
+Check all that apply:
+	
+X	MongoDB drivers authenticating to MongoDB with LDAP send LDAP credentials using SASL PLAIN which sends the username/password in clear text
+X	LDAP Authentication support is a MongoDB Enterprise only feature
+	LDAP is more secure than Kerberos
+X	saslauthd is a proxy service used by mongod to talk to a LDAP server
+
+
+Answer
+
+The following are true regarding LDAP authentication:
+
+MongoDB drivers authenticating to MongoDB with LDAP send LDAP credentials using SASL PLAIN which sends the username/password in clear text.
+LDAP Authentication support is a MongoDB Enterprise only feature.
+saslauthd is a proxy service used by mongod to talk to a LDAP server
+LDAP is more secure than Kerberos
+
+This is not true. LDAP was not designed for the purpose of external authentication. LDAP was designed to store user meta-data in a directory service. Kerberos was designed for the sole purpose of external authentication.
+
+
+
+
 
 
