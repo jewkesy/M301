@@ -157,3 +157,23 @@ Answer
 SCRAM-SHA-1 is the default password authentication mechanism on MongoDB.
 
 
+## Enabling X.509
+How does the mongod know the identity of the client?
+Check all that apply:
+
+X	It obtains a certificate from the client when the TLS connection is established
+X	The certificate must be signed by the certificate authority file passed to the mongod
+X	The subject of the certifcate must match the names of the user in the $external database
+
+
+Answer
+
+All of the following are true:
+
+It obtains a certificate from the client when the TLS connection is established.
+The certificate must be signed by the certificate authority file passed to the mongod.
+The subject of the certificate must match the name of the user in the $external database.
+
+
+
+
