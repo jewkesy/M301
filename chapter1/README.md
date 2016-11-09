@@ -231,6 +231,16 @@ The following security mechanisms are supported by internal authentication with 
 X.509
 Keyfile
 
+## Enabling Internal X.509 Authentication
+What is the option passed to mongod (including argument) to specify that X.509 certificates will be used for internal authentication?
+`
+--clusterAuthMode x509
+`
+
+Answer
+
+--clusterAuthMode x509 is passed to mongod to specify that X.509 certificates will be used for internal authentication.
+
 
 
 
