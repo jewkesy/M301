@@ -112,6 +112,48 @@ use admin
 db.auth('kirby', 'password')
 `
 
+## Authentication on Sharded Clusters
+Authentication on a sharded cluster is achieved by...
+Check all that apply:
 
+	passing a --auth option to mongos
+	passing a --auth option to each mongod
+	passing a --auth option to mongod and to mongos
+X	enabling internal authentication between members using keyfiles
+X	enabling internal authentication between members using X.509 certificates
+
+Answer
+
+Authentication on a sharded cluster is achieved by...
+
+enabling internal authentication between members using keyfiles
+enabling internal authentication between members using X.509 certificates
+Authentication on a sharded cluster is enabled by enabling internal authentication. It doesn't matter if you use keyfiles or X.509 certificates.
+
+Authentication on a sharded cluster is not achieved by...
+
+passing a --auth option to mongos
+
+There is no --auth option for mongos.
+
+passing a --auth option to each mongod
+
+This would enable client authentication on each mongod, which would not enable authentication on communication via the mongos.
+
+passing a --auth option to each mongod and to ``mongos``
+
+There is no --auth option for mongos.
+
+## Enabling SCRAM-SHA-1
+SCRAM-SHA-1 is the default password authentication mechanism on MongoDB.
+Choose the best answer:
+
+X	True
+	False
+
+
+Answer
+
+SCRAM-SHA-1 is the default password authentication mechanism on MongoDB.
 
 
